@@ -1,8 +1,7 @@
 <template>
   <div class="info">
     <div class="info__image-container">
-      <img src="@/assets/img/декор.png" alt="image" class="info__decor" />
-      <img src="@/assets/img/Untitled.png" alt="image" class="info__image" />
+        <img src="@/assets/img/Untitled.png" alt="image" class="info__image" />
     </div>
     <div class="info__container">
       <h1 class="info__title">Что такое dbco?</h1>
@@ -14,7 +13,7 @@
         позволяет автоматизировать различные виды деятельности, используя единую
         технологическую базу.
       </p>
-        <link-button>Попробовать пямо сейчас</link-button>
+        <link-button>Попробовать пямо сейчас</link-button>        
     </div>
   </div>
 </template>
@@ -37,6 +36,7 @@ $text-color: #078fd3;
   background-color: $background-color;
   display: flex;
   width: 100%;
+  background-image: url(@/assets/img/декор.png);  
 
   &__image-container {
     display: flex;
@@ -44,15 +44,7 @@ $text-color: #078fd3;
     padding-left: 5%;
     height: 60vw;
   }
-  &__decor {
-    position: absolute;
-    z-index: 1;
-    height: 100vh;
-    left: 0;
-    width: 60%;
-  }
   &__image {
-    position: relative;
     z-index: 0;
     width: 600px;
     height: 400px;
