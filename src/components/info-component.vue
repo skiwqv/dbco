@@ -29,14 +29,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$background-color: #e5e5e5;
 $text-color: #078fd3;
 .info {
   font-family: Opel Sans;
-  background-color: $background-color;
   display: flex;
   width: 100%;
-  background-image: url(@/assets/img/декор.png);  
+  background-image: url(@/assets/img/декор.png);
+  background-repeat: no-repeat;
+  background-size: cover;  
 
   &__image-container {
     display: flex;
