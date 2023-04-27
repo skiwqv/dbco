@@ -5,10 +5,7 @@ module.exports = defineConfig({
     loaderOptions:{
       sass:{
         implementation: require('sass'),
-        sassOptions: {
-          indentedSyntax: true
-        },
-        prependData: `@import "@/assets/styles/variables.scss";`
+        additionalData: `@import "~@/assets/css/variables.scss";`
       }
     }
   }

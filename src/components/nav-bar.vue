@@ -38,6 +38,7 @@ $header-link-hover-color: #078fd3;
 $header-search-input-border-color: #c1c1c1;
 
 .header {
+  font-family: 'Opel Sans';
   display: flex;
   justify-content: center;
   align-content: center;
@@ -67,6 +68,7 @@ $header-search-input-border-color: #c1c1c1;
 
   &__logo {
     margin-right: 40px;
+    margin-left: 40px;
 
     img {
       width: 331px;
