@@ -31,7 +31,7 @@ export default {
 
   &__text__container {
     width: 1000px;
-    height: 1000px;
+    height: 900px;
     display: flex;
     flex-direction: column;
     justify-content: center;
