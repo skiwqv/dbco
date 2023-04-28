@@ -31,6 +31,10 @@ export default {};
     display: flex;
     align-items: center;
     text-align: center;
+    transition: all 0.3soip;
+    &:hover{
+      background-color: #0077c2;
+    }
   }
 }
 </style>
