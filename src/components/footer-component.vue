@@ -1,10 +1,14 @@
 <template>
   <div class="footer">
     <ul class="footer__links">
-      <li><a href="" class="footer__link">Главная</a></li>
+      <li><router-link to="/" class="footer__link">Главная</router-link></li>
       <li><a href="" class="footer__link">Решения dbco</a></li>
       <li><a href="" class="footer__link">Ресурсы</a></li>
-      <li><a href="" class="footer__link">Мой кабинет</a></li>
+      <li>
+        <router-link to="/register" class="footer__link"
+          >Мой кабинет</router-link
+        >
+      </li>
     </ul>
     <div class="footer__divider"></div>
     <div class="footer__text">2002-2019 DBCO. Все права защищены</div>
@@ -36,12 +40,12 @@ export default {
       text-decoration: underline;
     }
   }
-  &__divider{
-    background-color: #FFFFFF;  
+  &__divider {
+    background-color: #ffffff;
     width: 500px;
     height: 1px;
   }
-  &__text{
+  &__text {
     color: white;
     display: flex;
     justify-content: center;

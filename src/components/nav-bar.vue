@@ -6,16 +6,39 @@
         <span class="header__text">en</span>
       </div>
       <div class="header__logo">
-        <img src="@/assets/img/logo.png" alt="DBCO" />
+        <router-link to="/">
+          <img src="@/assets/img/logo.png" alt="DBCO"
+        /></router-link>
       </div>
       <ul class="header__menu">
-        <li><a href="#" class="header__link">Главная</a></li>
-        <li><a href="#" class="header__link">Решения DBCO</a></li>
+        <li>
+          <router-link
+            to="/"
+            class="header__link"
+            active-class="header__link_active"
+            >Главная</router-link
+          >
+        </li>
+        <li>
+          <router-link
+            to="/resource"
+            class="header__link"
+            active-class="header__link_active"
+            >Решения dbco</router-link
+          >
+        </li>
         <li><a href="#" class="header__link">Ресурсы</a></li>
-        <li><a href="#" class="header__link">Мой кабинет</a></li>
+        <li>
+          <router-link
+            to="/register"
+            active-class="header__link_active"
+            class="header__link"
+            >Мой кабинет</router-link
+          >
+        </li>
       </ul>
       <div class="header__search">
-        <input type="text"/>
+        <input type="text" />
         <button type="submit">
           <img src="@/assets/img/лупа.png" alt="Search" />
         </button>
@@ -38,7 +61,7 @@ $header-link-hover-color: #078fd3;
 $header-search-input-border-color: #c1c1c1;
 
 .header {
-  font-family: 'Opel Sans';
+  font-family: "Opel Sans";
   display: flex;
   justify-content: center;
   align-content: center;
@@ -89,6 +112,9 @@ $header-search-input-border-color: #c1c1c1;
       font-size: 20px;
       color: $header-link-color;
       transition: color 0.3s ease-in-out;
+      &_active {
+        color: $header-link-hover-color;
+      }
 
       &:hover {
         color: $header-link-hover-color;

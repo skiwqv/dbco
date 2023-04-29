@@ -1,5 +1,5 @@
 <template>
-  <button class="linkButton">
+  <button class="linkButton" @click="toRegister">
     <slot></slot>
   </button>
 </template>
@@ -7,6 +7,11 @@
 <script>
 export default {
   name: "link-button",
+  methods:{
+    toRegister(){
+      this.$router.push('/register')
+    }
+  }
 };
 </script>
 

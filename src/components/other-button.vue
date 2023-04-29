@@ -1,13 +1,20 @@
 <template>
   <div class="other">
-    <button class="other__button">
+    <button class="other__button" @click="toResourse">
       <slot></slot>
     </button>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  name:"other-button",
+  methods:{
+    toResourse(){
+      this.$router.push('/resource')
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
