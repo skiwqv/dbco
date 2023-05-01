@@ -44,4 +44,13 @@ export default {
     }
   }
 }
+@media(max-width:768px)  {
+  .other{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 0;
+  }
+  
+}
 </style>

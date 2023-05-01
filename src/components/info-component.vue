@@ -70,5 +70,17 @@ $text-color: #078fd3;
     font-weight: 700;
     font-size: 20px;
   }
+  @media (max-width: 768px) {
+
+    &__image{
+      display: none;
+    }
+    &__title{
+      font-size: 30px;
+    }
+    &__text{
+      font-size: 17px;
+    }
+  }
 }
 </style>

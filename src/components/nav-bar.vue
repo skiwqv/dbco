@@ -7,40 +7,45 @@
       </div>
       <div class="header__logo">
         <router-link to="/">
-          <img src="@/assets/img/logo.png" alt="DBCO"
+          <img
+            src="@/assets/img/logo.png"
+            class="header__logo-image"
+            alt="DBCO"
         /></router-link>
       </div>
-      <ul class="header__menu">
+      <ul class="header__menu" v-for="link in links" :key="link.name">
         <li>
           <router-link
-            to="/"
+            :to="link.to"
             class="header__link"
             active-class="header__link_active"
-            >Главная</router-link
-          >
-        </li>
-        <li>
-          <router-link
-            to="/resource"
-            class="header__link"
-            active-class="header__link_active"
-            >Решения dbco</router-link
-          >
-        </li>
-        <li><a href="#" class="header__link">Ресурсы</a></li>
-        <li>
-          <router-link
-            to="/register"
-            active-class="header__link_active"
-            class="header__link"
-            >Мой кабинет</router-link
+            >{{ link.name }}</router-link
           >
         </li>
       </ul>
       <div class="header__search">
-        <input type="text" />
-        <button type="submit">
+        <input type="text" class="header__input" />
+        <button type="submit" class="header__icon-search">
           <img src="@/assets/img/лупа.png" alt="Search" />
+        </button>
+      </div>
+      <div>
+        <button class="header__nav-button" @click="show = !show">
+          <img
+            src="@/assets/img/nav-icon.png"
+            alt="nav"
+            class="header__nav-icon"
+          />
+          <ul v-if="show" class="header__nav-menu">
+            <li v-for="link in links" :key="link.name" class="header__li">
+              <router-link
+                :to="link.to"
+                class="header__link"
+                active-class="header__link_active"
+                >{{ link.name }}</router-link
+              >
+            </li>
+          </ul>
         </button>
       </div>
     </nav>
@@ -50,6 +55,29 @@
 <script>
 export default {
   name: "nav-bar",
+  data() {
+    return {
+      links: [
+        {
+          name: "Главная",
+          to: "/",
+        },
+        {
+          name: "Решения dbco",
+          to: "resource",
+        },
+        {
+          name: "Ресурсы",
+          to: "/res",
+        },
+        {
+          name: "Мой кабинет",
+          to: "/register",
+        },
+      ],
+      show: false,
+    };
+  },
 };
 </script>
 
@@ -92,11 +120,6 @@ $header-search-input-border-color: #c1c1c1;
   &__logo {
     margin-right: 40px;
     margin-left: 40px;
-
-    img {
-      width: 331px;
-      height: 100px;
-    }
   }
 
   &__menu {
@@ -126,25 +149,94 @@ $header-search-input-border-color: #c1c1c1;
     display: flex;
     align-items: center;
     margin-left: 40px;
-
-    input {
-      border: 1px solid #333333;
-      border-radius: 7px;
-      width: 255px;
-      height: 30px;
+  }
+  &__icon-search {
+    width: 10px;
+    height: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  &__input {
+    border: 1px solid #333333;
+    border-radius: 7px;
+    height: 30px;
+  }
+  &__nav-menu {
+    background-color: $header-link-color;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: stretch;
+  }
+  &__nav-icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  &__nav-button {
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  @media (min-width: 769px) {
+    &__nav-menu {
+      display: none;
     }
-
-    button {
-      width: 40px;
-      height: 40px;
-      margin-left: 20px;
-      border: none;
-      background-color: transparent;
-      cursor: pointer;
-
-      img {
-        height: 20px;
+    &__nav-icon {
+      display: none;
+    }
+  }
+  @media (max-width: 768px) {
+    &__li {
+      display: flex;
+      padding: 0;
+      margin: 0;
+    }
+    &__link {
+      color: white;
+      text-decoration: none;
+      padding-top: 10px;
+      width: 100%;
+      font-size: 20px;
+      &_active {
+        background-color: $header-link-hover-color;
       }
+
+      &:hover {
+        background-color: $header-link-hover-color;
+      }
+    }
+    &__menu {
+      display: none;
+    }
+    &__logo {
+      width: 200px;
+      height: 100px;
+    }
+    &__logo-image {
+      width: 100%;
+      height: 100%;
+    }
+    &__search {
+      height: 30px;
+      width: 100px;
+      margin: 0;
+      display: flex;
+      align-items: flex-start;
+    }
+    &__input {
+      height: 15px;
+      width: 100px;
     }
   }
 }

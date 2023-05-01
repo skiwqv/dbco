@@ -106,5 +106,18 @@ export default {
   &__peopleContainer {
     display: flex;
   }
+  @media (max-width : 768px) {
+    &__image{
+      height: 500px;
+      width: 100%;
+    }
+    &__buildingImage{
+      display: none;
+    }
+    &__graphic{
+      width: 350px;
+      height: 300px;
+    } 
+  }
 }
 </style>

@@ -63,5 +63,32 @@ export default {};
     flex-direction: column;
     align-items: center;
   }
+  @media (max-width: 768px) {
+    &__title{
+      display: flex;
+      padding: 0;
+      justify-content: center;
+    }
+    &__container{
+      display: flex;
+      flex-direction: column;
+    }
+    &__vector{
+      width: 15px;
+      height: 15px;
+    }
+    &__elipse{
+      width: 50px;
+      height: 50px;
+    }
+    &__image{
+      width: 400px;
+      height: 300px;
+    }
+    &__images{
+      border: none;
+      padding-top: 30px;
+    }
+  }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="people">
+  <section class="people">
     <div class="people__text__container">
       <h1 class="people__title">Клиенты dbco</h1>
       <ul>
@@ -11,7 +11,7 @@
         </li>
       </ul>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -37,7 +37,7 @@ export default {
     justify-content: center;
     align-items: center;
   }
-  
+
   &__title {
     height: 35px;
     width: 450px;
@@ -47,5 +47,15 @@ export default {
   &__text {
     font-size: 20px;
   }
+  
+}
+@media (max-width: 768px) {
+  .people{
+    background-image: none;
+    &__text__container {
+      background-image: none;
+    }
+  }
+
 }
 </style>

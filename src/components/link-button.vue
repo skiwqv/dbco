@@ -37,5 +37,9 @@ export default {
   &:hover{
     background-color: #0077c2;
   }
+  @media (max-width: 768px) {
+    width: 200px;
+    font-size: 20px;
+  }
 }
 </style>

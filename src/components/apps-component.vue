@@ -43,5 +43,20 @@
       width: 300px;
       height: 200px;
     }
+    @media (max-width: 768px) {
+      &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      &__divider{
+        display: none;
+      }
+      &__title{
+        display: flex;
+        padding: 0;
+        justify-content: center;
+      }
+    }
   }
   </style>
