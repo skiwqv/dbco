@@ -2,8 +2,10 @@
   <div class="footer">
     <ul class="footer__links">
       <li><router-link to="/" class="footer__link">Главная</router-link></li>
-      <li><a href="" class="footer__link">Решения dbco</a></li>
-      <li><a href="" class="footer__link">Ресурсы</a></li>
+      <li>
+        <router-link to="/resource" class="footer__link">Главная</router-link>
+      </li>
+      <li><router-link to="/res" class="footer__link">Главная</router-link></li>
       <li>
         <router-link to="/register" class="footer__link"
           >Мой кабинет</router-link

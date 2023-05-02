@@ -3,7 +3,7 @@
     <div class="circleInfo">
       <div class="circleInfo__background">
         <img
-          src="@/assets/img/block2.png"
+          src="@/assets/img/circle-info-image/block2.png"
           alt="circle info"
           class="circleInfo__image"
         />
@@ -32,14 +32,14 @@
                 бизнес-решений?
               </h1>
               <img
-                src="@/assets/img/graphic.png"
+                src="@/assets/img/circle-info-image/graphic.png"
                 alt="graphic"
                 class="circleInfo__graphic"
               />
             </div>
           </div>
           <img
-            src="@/assets/img/build.png"
+            src="@/assets/img/circle-info-image/build.png"
             alt="build img"
             class="circleInfo__buildingImage"
           />
@@ -51,7 +51,7 @@
 </template>
 
 <script>
-import peopleImageVue from "./people-image.vue";
+import peopleImageVue from "../home-components/people-image.vue";
 export default {
   name: "circleInfo",
   components: {
@@ -63,7 +63,7 @@ export default {
 <style lang="scss" scoped>
 .circleInfo {
   &__background {
-    background-image: url(@/assets/img/blueBG.png);
+    background-image: url(@/assets/img/circle-info-image/blueBG.png);
     height: 100%;
     width: 100vw;
   }

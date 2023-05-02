@@ -1,14 +1,24 @@
 {
   "register": [
     {
-      "surname": "фіфа",
-      "name": "лілія",
-      "patronymic": "лулаана",
-      "birthday": "2023-04-03",
-      "adres": "пипипапа",
-      "inn": "121121221",
-      "number": 121221212,
+      "surname": "zx",
+      "name": "zxz",
+      "patronymic": "xz",
+      "birthday": "2023-05-20",
+      "adres": "zx",
+      "inn": 121212121212,
+      "number": 1212121212,
       "id": 1
+    },
+    {
+      "surname": "12",
+      "name": "123",
+      "patronymic": "234",
+      "birthday": "1958-09-16",
+      "adres": "1212",
+      "inn": 123456789012,
+      "number": 1234567890,
+      "id": 2
     }
   ]
 }

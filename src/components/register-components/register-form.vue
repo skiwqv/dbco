@@ -32,7 +32,7 @@
           <div v-show="v$?.adres?.$error" class="form__error">
             Адрес обязателен
           </div>
-          <input type="text" class="form__input" v-model="inn" />
+          <input type="number" class="form__input" v-model="inn" />
           <div v-show="v$?.inn?.$error" class="form__error">ИНН обязателен</div>
           <input type="number" class="form__input" v-model="number" />
           <div v-show="v$?.number?.$error" class="form__error">
@@ -50,7 +50,7 @@
 </template>
 <script>
 import useVuelidate from "@vuelidate/core";
-import { required } from "@vuelidate/validators";
+import { required, minLength } from "@vuelidate/validators";
 import { mapActions } from "vuex";
 export default {
   data() {
@@ -72,8 +72,8 @@ export default {
       patronymic: { required },
       birthday: { required },
       adres: { required },
-      inn: { required },
-      number: { required },
+      inn: { required,minLength:minLength(12) },
+      number: { required, minLength:minLength(10) },
     };
   },
   methods: {
@@ -84,7 +84,7 @@ export default {
     submitForm() {
       this.v$.$validate();
       if (!this.v$.$error) {
-        const formData = {
+        let formData = {
           surname: this.surname,
           name: this.name,
           patronymic: this.patronymic,
@@ -93,7 +93,6 @@ export default {
           inn: this.inn,
           number: this.number,
         };
-        console.log("data", formData);
         this.submit(formData);
       } else {
         console.log("err");

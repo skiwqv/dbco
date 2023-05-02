@@ -1,7 +1,7 @@
 <template>
   <div class="info">
     <div class="info__image-container">
-        <img src="@/assets/img/Untitled.png" alt="image" class="info__image" />
+        <img src="@/assets/img/info-image/Untitled.png" alt="image" class="info__image" />
     </div>
     <div class="info__container">
       <h1 class="info__title">Что такое dbco?</h1>
@@ -34,7 +34,7 @@ $text-color: #078fd3;
   font-family: Opel Sans;
   display: flex;
   width: 100%;
-  background-image: url(@/assets/img/декор.png);
+  background-image: url(@/assets/img/info-image/декор.png);
   background-repeat: no-repeat;
   background-size: cover;  
 

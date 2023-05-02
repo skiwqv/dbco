@@ -22,7 +22,7 @@ export default {
 
 <style lang="scss" scoped>
 .people {
-  background-image: url(@/assets/img/people.png);
+  background-image: url(@/assets/img/people-image/people.png);
   background-size: contain;
   background-repeat: no-repeat;
   align-content: center;

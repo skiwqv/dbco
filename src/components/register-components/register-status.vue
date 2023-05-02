@@ -2,7 +2,7 @@
   <div class="status">
     <span class="status__text"
       >Автообновление
-      <img src="@/assets/img/switcher.png" alt="" />
+      <img src="@/assets/img/form-image/switcher.png" alt="" />
     </span>
     <div class="status__nameContainer">
       <span class="status__name">Решение </span>
@@ -22,14 +22,14 @@
         <span>2019-11-09. 12:19</span>
       </div>
       <div class="status__progress">
-        <img src="@/assets/img/progress.png" alt="" class="status__image" />
-        <img src="@/assets/img/switcher.png" alt="" class="status__switcher" />
-        <img src="@/assets/img/progress.png" alt="" class="status__image" />
+        <img src="@/assets/img/form-image/progress.png" alt="" class="status__image" />
+        <img src="@/assets/img/form-image/switcher.png" alt="" class="status__switcher" />
+        <img src="@/assets/img/form-image/progress.png" alt="" class="status__image" />
       </div>
       <div class="status__starsContainer">
-        <img src="@/assets/img/star.png" alt="" class="status__star" />
-        <img src="@/assets/img/star.png" alt="" class="status__star" />
-        <img src="@/assets/img/star.png" alt="" class="status__star" />
+        <img src="@/assets/img/form-image/star.png" alt="" class="status__star" />
+        <img src="@/assets/img/form-image/star.png" alt="" class="status__star" />
+        <img src="@/assets/img/form-image/star.png" alt="" class="status__star" />
       </div>
     </div>
   </div>
@@ -93,14 +93,6 @@ export default {
     color: #078fd3;
     flex-direction: column;
     justify-content: space-between;
-  }
-  &__loading {
-    width: 30px;
-    height: 30px;
-    background-image: url(@/assets/img/Ellipse9.png);
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
   }
   &__progress {
     display: flex;

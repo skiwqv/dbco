@@ -23,9 +23,9 @@
 </template>
 
 <script>
-import scopedNav from "@/components/scoped-nav.vue";
-import registerForm from "@/components/register-form.vue"
-import registerStatusVue from '@/components/register-status.vue';
+import scopedNav from "@/components/register-components/scoped-nav.vue";
+import registerForm from "@/components/register-components/register-form.vue"
+import registerStatusVue from '@/components/register-components/register-status.vue';
 export default {
   name: "register-component",
   components: {

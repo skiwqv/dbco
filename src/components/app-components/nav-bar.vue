@@ -8,7 +8,7 @@
       <div class="header__logo">
         <router-link to="/">
           <img
-            src="@/assets/img/logo.png"
+            src="@/assets/img/nav-image/logo.png"
             class="header__logo-image"
             alt="DBCO"
         /></router-link>
@@ -26,13 +26,13 @@
       <div class="header__search">
         <input type="text" class="header__input" />
         <button type="submit" class="header__icon-search">
-          <img src="@/assets/img/лупа.png" alt="Search" />
+          <img src="@/assets/img/nav-image/лупа.png" alt="Search" />
         </button>
       </div>
       <div>
         <button class="header__nav-button" @click="show = !show">
           <img
-            src="@/assets/img/nav-icon.png"
+            src="@/assets/img/nav-image/nav-icon.png"
             alt="nav"
             class="header__nav-icon"
           />
@@ -129,19 +129,18 @@ $header-search-input-border-color: #c1c1c1;
     li + li {
       margin-left: 30px;
     }
+  }
+  &__link {
+    text-decoration: none;
+    font-size: 20px;
+    color: $header-link-color;
+    transition: color 0.3s ease-in-out;
+    &_active {
+      color: $header-link-hover-color;
+    }
 
-    .header__link {
-      text-decoration: none;
-      font-size: 20px;
-      color: $header-link-color;
-      transition: color 0.3s ease-in-out;
-      &_active {
-        color: $header-link-hover-color;
-      }
-
-      &:hover {
-        color: $header-link-hover-color;
-      }
+    &:hover {
+      color: $header-link-hover-color;
     }
   }
 
@@ -166,10 +165,13 @@ $header-search-input-border-color: #c1c1c1;
     background-color: $header-link-color;
     padding: 0;
     margin: 0;
+    height: 100vh;
+    top: 0;
+    z-index: 4;
     list-style: none;
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     align-items: stretch;
   }
   &__nav-icon {
@@ -205,14 +207,17 @@ $header-search-input-border-color: #c1c1c1;
     &__link {
       color: white;
       text-decoration: none;
-      padding-top: 10px;
+      padding-top: 20px;
+      align-self: center;
       width: 100%;
       font-size: 20px;
+      transition: all 0.3s;
       &_active {
         background-color: $header-link-hover-color;
       }
 
       &:hover {
+        color: white;
         background-color: $header-link-hover-color;
       }
     }

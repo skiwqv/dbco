@@ -10,11 +10,11 @@
 </template>
 
 <script>
-import infoComponent from "../components/info-component.vue";
-import circleInfo from "../components/circle-info.vue";
-import appsComponent from "../components/apps-component.vue";
-import otherButton from "../components/other-button.vue";
-import reviewComponent from "../components/review-component.vue";
+import infoComponent from "../components/home-components/info-component.vue";
+import circleInfo from "../components/home-components/circle-info.vue";
+import appsComponent from "../components/resource-components/apps-component.vue";
+import otherButton from "../components/home-components/other-button.vue";
+import reviewComponent from "../components/home-components/review-component.vue";
 export default {
   name: "Home-view",
   components: {

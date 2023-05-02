@@ -4,11 +4,11 @@
         <slot></slot>
       </h1>
       <div class="apps__container">
-        <img src="@/assets/img/app1.png" alt="app new" class="apps__image" />
+        <img src="@/assets/img/resource-image/app1.png" alt="app new" class="apps__image" />
         <div class="apps__divider"></div>
-        <img src="@/assets/img/app2.png" alt="app new" class="apps__image" />
+        <img src="@/assets/img/resource-image/app2.png" alt="app new" class="apps__image" />
         <div class="apps__divider"></div>
-        <img src="@/assets/img/app3.png" alt="app new" class="apps__image" />
+        <img src="@/assets/img/resource-image/app3.png" alt="app new" class="apps__image" />
       </div>
     </div>
   </template>

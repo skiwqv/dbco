@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import appsComponent from "../components/apps-component.vue";
-import scopedNav from "@/components/scoped-nav.vue";
+import appsComponent from "../components/resource-components/apps-component.vue";
+import scopedNav from "../components/register-components/scoped-nav.vue";
 export default {
   name: "resourse-view",
   components: {

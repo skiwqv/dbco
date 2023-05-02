@@ -3,16 +3,16 @@
     <h1 class="review__title">Отзывы:</h1>
     <div class="review__container">
       <div class="review__images">
-        <div src="@/assets/img/Ellipse.png" alt="" class="review__elipse">
-            <img src="@/assets/img/Vector.png" alt="" class="review__vector">
+        <div  class="review__elipse">
+          <img src="@/assets/img/review-image/Vector.png" alt="" class="review__vector" />
         </div>
-        <img src="@/assets/img/Чел.png" alt="" class="review__image" />
+        <img src="@/assets/img/review-image/Чел.png" alt="" class="review__image" />
       </div>
       <div class="review__images">
-        <div src="@/assets/img/Ellipse.png" alt="" class="review__elipse">
-            <img src="@/assets/img/Vector.png" alt="" class="review__vector">
+        <div  class="review__elipse">
+          <img src="@/assets/img/review-image/Vector.png" alt="" class="review__vector" />
         </div>
-        <img src="@/assets/img/Чел.png" alt="" class="review__image" />
+        <img src="@/assets/img/review-image/Чел.png" alt="" class="review__image" />
       </div>
     </div>
   </div>
@@ -40,7 +40,7 @@ export default {};
     justify-content: space-around;
   }
   &__elipse {
-    background-image: url(@/assets/img/Ellipse.png);
+    background-image: url(@/assets/img/review-image/Ellipse.png);
     width: 80px;
     height: 80px;
     display: flex;
@@ -48,7 +48,7 @@ export default {};
     justify-content: center;
     background-size: cover;
   }
-  &__vector{
+  &__vector {
     width: 30px;
     height: 30px;
   }
@@ -57,35 +57,35 @@ export default {};
     height: 300px;
   }
   &__images {
-    border: 1px solid #E5E5E5;
+    border: 1px solid #e5e5e5;
     border-radius: 18px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   @media (max-width: 768px) {
-    &__title{
+    &__title {
       display: flex;
       padding: 0;
       justify-content: center;
     }
-    &__container{
+    &__container {
       display: flex;
       flex-direction: column;
     }
-    &__vector{
+    &__vector {
       width: 15px;
       height: 15px;
     }
-    &__elipse{
+    &__elipse {
       width: 50px;
       height: 50px;
     }
-    &__image{
+    &__image {
       width: 400px;
       height: 300px;
     }
-    &__images{
+    &__images {
       border: none;
       padding-top: 30px;
     }
