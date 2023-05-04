@@ -3,9 +3,11 @@
     <ul class="footer__links">
       <li><router-link to="/" class="footer__link">Главная</router-link></li>
       <li>
-        <router-link to="/resource" class="footer__link">Главная</router-link>
+        <router-link to="/resource" class="footer__link">Решения dbco</router-link>
       </li>
-      <li><router-link to="/res" class="footer__link">Главная</router-link></li>
+      <li>
+        <router-link to="/res" class="footer__link">Ресурсы </router-link>
+      </li>
       <li>
         <router-link to="/register" class="footer__link"
           >Мой кабинет</router-link

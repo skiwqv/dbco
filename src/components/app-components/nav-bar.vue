@@ -149,8 +149,8 @@ $header-search-input-border-color: #c1c1c1;
     margin-left: 40px;
   }
   &__icon-search {
-    width: 10px;
-    height: 10px;
+    width: 18px;
+    height: 18px;
     border: none;
     background-color: transparent;
     cursor: pointer;
