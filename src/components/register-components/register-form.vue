@@ -39,9 +39,7 @@
             Телефон обязателен
           </div>
           <div class="form__buttonContainer">
-            <button class="form__submit" @click="submitForm">
-              Отправить
-            </button>
+            <linkButton :size="'medium'" @event="submitForm">Отправить</linkButton>
           </div>
         </div>
       </form>
@@ -50,6 +48,7 @@
 </template>
 <script>
 import useVuelidate from "@vuelidate/core";
+import linkButton from "../common/link-button.vue";
 import { required, minLength } from "@vuelidate/validators";
 import { mapActions } from "vuex";
 export default {
@@ -64,6 +63,9 @@ export default {
       inn: "",
       number: "",
     };
+  },
+  components:{
+    linkButton
   },
   validations() {
     return {
@@ -130,6 +132,7 @@ export default {
   &__input {
     border: 1px solid #e0e0e0;
     border-radius: 7px;
+    padding-left:  6px;
     width: 400px;
     height: 30px;
     margin-top: 20px;
@@ -138,35 +141,6 @@ export default {
     display: flex;
     justify-content: flex-end;
     margin-left: 100px;
-  }
-  &__submit {
-    display: flex;
-    justify-content: center;
-    width: 120px;
-    height: 50px;
-    color: white;
-    border-radius: 7px;
-    border: none;
-    cursor: pointer;
-    margin-top: 40px;
-    background-color: #078fd3;
-    font-family: "Opel Sans";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 32px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    transition: all 0.3s;
-    &_disabled {
-      cursor: default;
-      background-color: gray;
-      color: rgb(215, 207, 207);
-    }
-    &:hover {
-      background-color: #0077c2;
-    }
   }
 }
 </style>

@@ -89,7 +89,6 @@ $header-link-hover-color: #078fd3;
 $header-search-input-border-color: #c1c1c1;
 
 .header {
-  font-family: "Opel Sans";
   display: flex;
   justify-content: center;
   align-content: center;

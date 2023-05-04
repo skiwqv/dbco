@@ -13,25 +13,29 @@
         позволяет автоматизировать различные виды деятельности, используя единую
         технологическую базу.
       </p>
-        <link-button>Попробовать пямо сейчас</link-button>        
+        <link-button @event="toRegister" :size="'large'">Попробовать пямо сейчас</link-button>        
     </div>
   </div>
 </template>
 
 <script>
-import linkButton from "./link-button.vue";
+import linkButton from "@/components/common/link-button.vue";
 export default {
   name: "info-component",
   components: {
     linkButton,
   },
+  methods:{
+    toRegister(){
+      this.$router.push('/register')
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 $text-color: #078fd3;
 .info {
-  font-family: Opel Sans;
   display: flex;
   width: 100%;
   background-image: url(@/assets/img/info-image/декор.png);

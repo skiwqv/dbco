@@ -4,7 +4,7 @@
     <circle-info />
     <apps-component>Новинки</apps-component>
     <apps-component>Популярное</apps-component>
-    <other-button>Остальные решения</other-button>
+    <link-button :size="'small'" @event="toResource">Остальные решения</link-button> 
     <review-component />
   </div>
 </template>
@@ -13,15 +13,20 @@
 import infoComponent from "../components/home-components/info-component.vue";
 import circleInfo from "../components/home-components/circle-info.vue";
 import appsComponent from "../components/resource-components/apps-component.vue";
-import otherButton from "../components/home-components/other-button.vue";
 import reviewComponent from "../components/home-components/review-component.vue";
+import linkButton from "@/components/common/link-button.vue";
 export default {
   name: "Home-view",
+  methods:{
+    toResource(){
+      this.$router.push('/resource')
+    }
+  },
   components: {
     infoComponent,
     circleInfo,
     appsComponent,
-    otherButton,
+    linkButton,
     reviewComponent,
   },
 };
