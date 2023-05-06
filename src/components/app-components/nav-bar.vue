@@ -13,8 +13,8 @@
             alt="DBCO"
         /></router-link>
       </div>
-      <ul class="header__menu" v-for="link in links" :key="link.name">
-        <li>
+      <ul class="header__menu" >
+        <li v-for="link in links" :key="link.name">
           <router-link
             :to="link.to"
             class="header__link"
@@ -52,33 +52,13 @@
   </header>
 </template>
 
-<script>
-export default {
-  name: "nav-bar",
-  data() {
-    return {
-      links: [
-        {
-          name: "Главная",
-          to: "/",
-        },
-        {
-          name: "Решения dbco",
-          to: "resource",
-        },
-        {
-          name: "Ресурсы",
-          to: "/res",
-        },
-        {
-          name: "Мой кабинет",
-          to: "/register",
-        },
-      ],
-      show: false,
-    };
-  },
-};
+<script setup>
+import { ref } from "vue";
+import { useLinks } from "@/composables/useLinks";
+
+const {links} = useLinks();
+
+const show = ref(false);
 </script>
 
 <style lang="scss" scoped>

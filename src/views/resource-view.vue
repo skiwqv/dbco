@@ -7,32 +7,34 @@
         </a>
       </template>
     </scoped-nav>
-    <apps-component class="resourse__apps"/>
+    <apps-component class="resourse__apps" />
     <apps-component class="resourse__apps" />
   </div>
 </template>
 
 <script>
-import appsComponent from "../components/resource-components/apps-component.vue";
+import { ref } from "vue";
+import appsComponent from "@/components/resource-components/apps-component.vue";
 import scopedNav from "../components/register-components/scopedNav.vue";
+
 export default {
-  name: "resourse-view",
+  name: "ResourceView",
   components: {
     appsComponent,
     scopedNav,
   },
-  data() {
-    return {
-      appsLinks: [
-        "Все",
-        "Общее",
-        "На заказ",
-        "Компаниям",
-        "Сотрудникам",
-        "Для дома",
-        "Прочее",
-      ],
-    };
+  setup() {
+    const appsLinks = ref([
+      "Все",
+      "Общее",
+      "На заказ",
+      "Компаниям",
+      "Сотрудникам",
+      "Для дома",
+      "Прочее",
+    ]);
+
+    return { appsLinks };
   },
 };
 </script>
@@ -49,7 +51,7 @@ export default {
       color: #078fd3;
     }
   }
-  &__apps{
+  &__apps {
     margin-bottom: 100px;
   }
 }

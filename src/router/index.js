@@ -25,5 +25,11 @@ const router = createRouter({
   history: createWebHistory(),
   routes
 })
+router.afterEach(()=>{
+  window.scrollTo({
+    top:0,
+    behavior: 'smooth'
+  })
+})
 
 export default router

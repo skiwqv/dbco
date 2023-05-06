@@ -1,17 +1,10 @@
 <template>
   <div class="footer">
     <ul class="footer__links">
-      <li><router-link to="/" class="footer__link">Главная</router-link></li>
-      <li>
-        <router-link to="/resource" class="footer__link">Решения dbco</router-link>
-      </li>
-      <li>
-        <router-link to="/res" class="footer__link">Ресурсы </router-link>
-      </li>
-      <li>
-        <router-link to="/register" class="footer__link"
-          >Мой кабинет</router-link
-        >
+      <li v-for="link in links" :key="link.name">
+        <router-link :to="link.to" class="footer__link">{{
+          link.name
+        }}</router-link>
       </li>
     </ul>
     <div class="footer__divider"></div>
@@ -19,10 +12,10 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "footer-component",
-};
+<script setup>
+import { useLinks } from "@/composables/useLinks";
+
+const { links } = useLinks();
 </script>
 
 <style lang="scss" scoped>
