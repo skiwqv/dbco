@@ -1,18 +1,20 @@
 <template>
   <ul class="nav">
     <li class="nav__links">
-        <slot :links="links" :class="nav__link" />
+      <slot :links="links" :class="nav__link" />
     </li>
   </ul>
 </template>
 
-<script>
-export default {
-  name: "scoped-nav",
-  props: {
-    links: { type: Array, required: true },
-  },
-};
+<script setup>
+import { reactive, defineProps } from "vue";
+const props = defineProps({
+  links: Array,
+});
+const state = reactive({
+  links: props.links,
+});
+const links = state.links
 </script>
 
 <style lang="scss" scoped>
@@ -23,10 +25,9 @@ export default {
     color: #c2c2c2;
     list-style: none;
   }
-  &__link{
+  &__link {
     font-size: 18px;
     cursor: pointer;
   }
-
 }
 </style>

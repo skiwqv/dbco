@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import scopedNav from "@/components/register-components/scoped-nav.vue";
+import scopedNav from "@/components/register-components/scopedNav.vue";
 import registerForm from "@/components/register-components/register-form.vue"
 import registerStatusVue from '@/components/register-components/register-status.vue';
 export default {

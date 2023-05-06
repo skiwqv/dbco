@@ -14,7 +14,7 @@
 
 <script>
 import appsComponent from "../components/resource-components/apps-component.vue";
-import scopedNav from "../components/register-components/scoped-nav.vue";
+import scopedNav from "../components/register-components/scopedNav.vue";
 export default {
   name: "resourse-view",
   components: {
