@@ -14,10 +14,7 @@
   </section>
 </template>
 
-<script>
-export default {
-  name: "people-image",
-};
+<script setup>
 </script>
 
 <style lang="scss" scoped>
@@ -47,15 +44,13 @@ export default {
   &__text {
     font-size: 20px;
   }
-  
 }
 @media (max-width: 768px) {
-  .people{
+  .people {
     background-image: none;
     &__text__container {
       background-image: none;
     }
   }
-
 }
 </style>

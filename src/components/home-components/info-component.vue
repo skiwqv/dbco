@@ -1,7 +1,11 @@
 <template>
   <div class="info">
     <div class="info__image-container">
-        <img src="@/assets/img/info-image/Untitled.png" alt="image" class="info__image" />
+      <img
+        src="@/assets/img/info-image/Untitled.png"
+        alt="image"
+        class="info__image"
+      />
     </div>
     <div class="info__container">
       <h1 class="info__title">Что такое dbco?</h1>
@@ -13,23 +17,19 @@
         позволяет автоматизировать различные виды деятельности, используя единую
         технологическую базу.
       </p>
-        <link-button @event="toRegister" :size="'large'">Попробовать пямо сейчас</link-button>        
+      <link-button :onClick="toRegister" :size="'large'"
+        >Попробовать пямо сейчас</link-button
+      >
     </div>
   </div>
 </template>
 
-<script>
+<script setup>
+import { useRouter } from "vue-router";
 import linkButton from "@/components/common/link-button.vue";
-export default {
-  name: "info-component",
-  components: {
-    linkButton,
-  },
-  methods:{
-    toRegister(){
-      this.$router.push('/register')
-    }
-  }
+ const router = useRouter();
+const toRegister = () => {
+  router.push('/register')
 };
 </script>
 
@@ -40,7 +40,7 @@ $text-color: #078fd3;
   width: 100%;
   background-image: url(@/assets/img/info-image/декор.png);
   background-repeat: no-repeat;
-  background-size: cover;  
+  background-size: cover;
 
   &__image-container {
     display: flex;
@@ -75,14 +75,13 @@ $text-color: #078fd3;
     font-size: 20px;
   }
   @media (max-width: 768px) {
-
-    &__image{
+    &__image {
       display: none;
     }
-    &__title{
+    &__title {
       font-size: 30px;
     }
-    &__text{
+    &__text {
       font-size: 17px;
     }
   }

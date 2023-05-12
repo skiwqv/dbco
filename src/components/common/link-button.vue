@@ -4,29 +4,26 @@
   </button>
 </template>
 
-<script>
-export default {
-  name: "link-button",
-  props: {
-    size: {
-      type: String,
-      default: "medium",
-    },
+<script setup>
+import { defineProps, computed } from "vue";
+const props = defineProps({
+  onClick: Function,
+  size: {
+    type: String,
+    default: "medium",
   },
-  computed: {
-    buttonClass() {
-      return {
-        "button-small": this.size === "small",
-        "button-medium": this.size === "medium",
-        "button-large": this.size === "large",
-      };
-    },
-  },
-  methods: {
-    handleButtonClick() {
-      this.$emit("event");
-    },
-  },
+});
+
+const buttonClass = computed(() => {
+  return {
+    "button-small": props.size === "small",
+    "button-medium": props.size === "medium",
+    "button-large": props.size === "large",
+  };
+});
+
+const handleButtonClick = () => {
+  props.onClick();
 };
 </script>
 

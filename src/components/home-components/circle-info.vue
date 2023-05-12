@@ -50,14 +50,8 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import peopleImageVue from "../home-components/people-image.vue";
-export default {
-  name: "circleInfo",
-  components: {
-    peopleImageVue,
-  },
-};
 </script>
 
 <style lang="scss" scoped>
@@ -106,18 +100,18 @@ export default {
   &__peopleContainer {
     display: flex;
   }
-  @media (max-width : 768px) {
-    &__image{
+  @media (max-width: 768px) {
+    &__image {
       height: 500px;
       width: 100%;
     }
-    &__buildingImage{
+    &__buildingImage {
       display: none;
     }
-    &__graphic{
+    &__graphic {
       width: 350px;
       height: 300px;
-    } 
+    }
   }
 }
 </style>

@@ -3,23 +3,38 @@
     <h1 class="review__title">Отзывы:</h1>
     <div class="review__container">
       <div class="review__images">
-        <div  class="review__elipse">
-          <img src="@/assets/img/review-image/Vector.png" alt="" class="review__vector" />
+        <div class="review__elipse">
+          <img
+            src="@/assets/img/review-image/Vector.png"
+            alt=""
+            class="review__vector"
+          />
         </div>
-        <img src="@/assets/img/review-image/Чел.png" alt="" class="review__image" />
+        <img
+          src="@/assets/img/review-image/Чел.png"
+          alt=""
+          class="review__image"
+        />
       </div>
       <div class="review__images">
-        <div  class="review__elipse">
-          <img src="@/assets/img/review-image/Vector.png" alt="" class="review__vector" />
+        <div class="review__elipse">
+          <img
+            src="@/assets/img/review-image/Vector.png"
+            alt=""
+            class="review__vector"
+          />
         </div>
-        <img src="@/assets/img/review-image/Чел.png" alt="" class="review__image" />
+        <img
+          src="@/assets/img/review-image/Чел.png"
+          alt=""
+          class="review__image"
+        />
       </div>
     </div>
   </div>
 </template>
 
-<script>
-export default {};
+<script setup>
 </script>
 
 <style lang="scss" scoped>

@@ -12,31 +12,20 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { ref } from "vue";
 import appsComponent from "@/components/resource-components/apps-component.vue";
 import scopedNav from "../components/register-components/scopedNav.vue";
 
-export default {
-  name: "ResourceView",
-  components: {
-    appsComponent,
-    scopedNav,
-  },
-  setup() {
-    const appsLinks = ref([
-      "Все",
-      "Общее",
-      "На заказ",
-      "Компаниям",
-      "Сотрудникам",
-      "Для дома",
-      "Прочее",
-    ]);
-
-    return { appsLinks };
-  },
-};
+const appsLinks = ref([
+  "Все",
+  "Общее",
+  "На заказ",
+  "Компаниям",
+  "Сотрудникам",
+  "Для дома",
+  "Прочее",
+]);
 </script>
 
 <style lang="scss" scoped>

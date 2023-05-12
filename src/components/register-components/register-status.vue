@@ -22,23 +22,44 @@
         <span>2019-11-09. 12:19</span>
       </div>
       <div class="status__progress">
-        <img src="@/assets/img/form-image/progress.png" alt="" class="status__image" />
-        <img src="@/assets/img/form-image/switcher.png" alt="" class="status__switcher" />
-        <img src="@/assets/img/form-image/progress.png" alt="" class="status__image" />
+        <img
+          src="@/assets/img/form-image/progress.png"
+          alt=""
+          class="status__image"
+        />
+        <img
+          src="@/assets/img/form-image/switcher.png"
+          alt=""
+          class="status__switcher"
+        />
+        <img
+          src="@/assets/img/form-image/progress.png"
+          alt=""
+          class="status__image"
+        />
       </div>
       <div class="status__starsContainer">
-        <img src="@/assets/img/form-image/star.png" alt="" class="status__star" />
-        <img src="@/assets/img/form-image/star.png" alt="" class="status__star" />
-        <img src="@/assets/img/form-image/star.png" alt="" class="status__star" />
+        <img
+          src="@/assets/img/form-image/star.png"
+          alt=""
+          class="status__star"
+        />
+        <img
+          src="@/assets/img/form-image/star.png"
+          alt=""
+          class="status__star"
+        />
+        <img
+          src="@/assets/img/form-image/star.png"
+          alt=""
+          class="status__star"
+        />
       </div>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: "register-status",
-};
+<script setup>
 </script>
 
 <style lang="scss" scoped>
@@ -62,7 +83,6 @@ export default {
   &__condition {
     display: flex;
     margin-bottom: 100px;
-
 
     justify-content: space-around;
     padding-top: 30px;

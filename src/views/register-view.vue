@@ -22,30 +22,20 @@
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref } from "vue";
 import scopedNav from "@/components/register-components/scopedNav.vue";
 import registerForm from "@/components/register-components/register-form.vue"
 import registerStatusVue from '@/components/register-components/register-status.vue';
-export default {
-  name: "register-component",
-  components: {
-    scopedNav,
-    registerForm,
-    registerStatusVue
-  },
-  data() {
-    return {
-      selected: "option1",
-      registerLinks: [
-        "Персональная информация",
-        "Мои решения",
-        "Финансы",
-        "Поддержка",
-        "База данных",
-      ],
-    };
-  },
-};
+
+const registerLinks = ref([
+  "Персональная информация",
+  "Мои решения",
+  "Финансы",
+  "Поддержка",
+  "База данных",
+])
+  const selected = ref("option1") 
 </script>
 
 <style lang="scss" scoped>
@@ -66,7 +56,7 @@ export default {
     display: flex;
     justify-content: center;
     padding-top: 40px;
- }
+  }
   &__radioButton {
     padding-left: 40px;
     font-weight: 700;
